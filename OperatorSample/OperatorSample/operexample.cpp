@@ -25,6 +25,30 @@ int main() {
 	cout << "Next holiday on: ";
 	NextHoliday.DisplayDate();
 
+	if (Holiday == PreviousHoliday)
+		cout << "Equality operator: The two are on the same day" << endl;
+	else
+		cout << "Equality operator: The two are on different day" << endl;
+
+	if (Holiday != PreviousHoliday)
+		cout << "Equality operator: The two are on different day" << endl;
+	else
+		cout << "Equality operator: The two are on the same day" << endl;
+
+	if (Holiday < NextHoliday)
+		cout << "operator<" << endl;
+
+	if (Holiday > PreviousHoliday)
+		cout << "operator>" << endl;
+
+	if (PreviousHoliday <= NextHoliday)
+		cout << "operator<=" << endl;
+
+	if (NextHoliday >= PreviousHoliday)
+		cout << "operator>=" << endl;
+
+	cout << Holiday[11] << endl;
+
 	system("pause");
 	return 0;
-}
+} 

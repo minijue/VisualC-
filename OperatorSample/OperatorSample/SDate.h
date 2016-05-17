@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <string>
 using namespace std;
 class SDate
 {
@@ -23,6 +24,17 @@ public:
 	// 二元运算符定义为成员函数和友元函数时参数上有所不同
 	SDate operator+(int DaysToAdd);
 	friend SDate operator-(SDate s, int DaysToSub);
+
+	bool operator==(const SDate& compareTo);
+	friend bool operator!=(const SDate& s1, const SDate& s2);
+
+	bool operator<(const SDate& compareTo);
+	bool operator>(const SDate& compareTo);
+
+	friend bool operator<=(const SDate& s1, const SDate& s2);
+	friend bool operator>=(const SDate& s1, const SDate& s2);
+
+	string operator[](unsigned int i);
 
 	void DisplayDate();
 };
