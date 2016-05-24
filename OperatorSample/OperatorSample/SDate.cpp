@@ -1,48 +1,36 @@
 #include "SDate.h"
 
-
-SDate& SDate::operator++()
+SDate SDate::operator++()
 {
 	++Day;
 	return *this;
 }
 
-SDate& SDate::operator--()
+SDate SDate::operator++(int)
 {
-	--Day;
-	return *this;
+	SDate copy(*this);
+	++(this->Day);
+
+	return copy;
 }
 
-SDate SDate::operator+(int DaysToAdd)
+SDate SDate::operator+(int x)
 {
-	SDate newDate(Day + DaysToAdd, Month, Year);
-	return newDate;
+	return SDate(Day + x, Month, Year);
 }
 
-bool SDate::operator==(const SDate& compareTo)
+bool SDate::operator==(const SDate& s2)
 {
-	return ((Day == compareTo.Day) && (Month == compareTo.Month) && (Year == compareTo.Year));
+	return ((Day == s2.Day) && (Month == s2.Month) && (Year&&s2.Year));
 }
 
-bool SDate::operator<(const SDate& compareTo)
+bool SDate::operator>(const SDate& s2)
 {
-	if (Year < compareTo.Year)
+	if (Year > s2.Year)
 		return true;
-	else if (Month < compareTo.Month)
+	else if (Month > s2.Month)
 		return true;
-	else if (Day < compareTo.Day)
-		return true;
-	else
-		return false;
-}
-
-bool SDate::operator>(const SDate& compareTo)
-{
-	if (Year > compareTo.Year)
-		return true;
-	else if (Month > compareTo.Month)
-		return true;
-	else if (Day > compareTo.Day)
+	else if (Day > s2.Day)
 		return true;
 	else
 		return false;
@@ -50,26 +38,19 @@ bool SDate::operator>(const SDate& compareTo)
 
 std::string SDate::operator[](unsigned int i)
 {
-	string m = "none";
-	switch (i)
-	{
-	case 1:m = "Jan"; break;
-	case 2:m = "Feb"; break;
-	case 3:m = "Mar"; break;
-	case 4:m = "Apr"; break;
-	case 5:m = "May"; break;
-	case 6:m = "Jun"; break;
-	case 7:m = "Jul"; break;
-	case 8:m = "Aug"; break;
-	case 9:m = "Sep"; break;
-	case 10:m = "Oct"; break;
-	case 11:m = "Nov"; break;
-	case 12:m = "Dec"; break;
+	string week;
+	switch (i) {
+	case 1: week = "Mon"; break;
+	case 2: week = "Tue"; break;
+	case 3: week = "Wed"; break;
+	case 4: week = "Thu"; break;
+	case 5: week = "Fri"; break;
+	case 6: week = "Sat"; break;
+	case 7: week = "Sun"; break;
 	default:
-		break;
+		week = "unknown";
 	}
-
-	return m;
+	return week;
 }
 
 void SDate::DisplayDate()
@@ -77,45 +58,28 @@ void SDate::DisplayDate()
 	cout << Day << "/" << Month << "/" << Year << endl;
 }
 
-SDate operator++(SDate& s, int) {
-	SDate Copy(s.Day, s.Month, s.Year);
-	++s.Day;
-
-	return Copy;
+// 以下为全局函数
+SDate operator--(SDate& s) {
+	--s.Day;
+	return s;
 }
 
 SDate operator--(SDate& s, int) {
-	SDate Copy(s.Day, s.Month, s.Year);
+	SDate copy(s);
 	--s.Day;
-
-	return Copy;
+	return copy;
 }
 
-SDate operator-(SDate s, int DaysToSub) {
-	return SDate(s.Day - DaysToSub, s.Month, s.Year);
+SDate operator+(int x, const SDate& s) {
+	return SDate(s.Day + x, s.Month, s.Year);
 }
 
-bool operator!=(const SDate& s1, const SDate& s2) {
-	return !((s1.Day == s2.Day) && (s1.Month == s2.Month) && (s1.Year == s2.Year));
-}
-
-bool operator<=(const SDate& s1, const SDate& s2) {
-	if (s1.Year <= s2.Year)
+bool operator<(const SDate& s1, const SDate& s2) {
+	if (s1.Year > s2.Year)
 		return true;
-	else if (s1.Month <= s2.Month)
+	else if (s1.Month > s2.Month)
 		return true;
-	else if (s1.Day <= s2.Day)
-		return true;
-	else
-		return false;
-}
-
-bool operator>=(const SDate& s1, const SDate& s2) {
-	if (s1.Year >= s2.Year)
-		return true;
-	else if (s1.Month >= s2.Month)
-		return true;
-	else if (s1.Day >= s2.Day)
+	else if (s1.Day > s2.Day)
 		return true;
 	else
 		return false;
