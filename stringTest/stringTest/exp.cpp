@@ -3,7 +3,7 @@
 #include <algorithm>
 using namespace std;
 
-// string 的用法示例
+// string 的用法示例 2017-03-08
 void stringTest() {
 	char cstylestr[] = "Hello world!";	// C风格字符串
 	const char* cstylestr1 = "This is a example.";
