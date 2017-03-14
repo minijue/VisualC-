@@ -10,6 +10,8 @@ public:
 		cout << "Constructor called." << endl;
 	}
 
+	CBox(const char* nv) : name(nv) {}
+
 	CBox() = default;
 private:
 	string name{ "zhang3" };
