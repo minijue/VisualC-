@@ -11,8 +11,6 @@ int main()
 	box = { "li4",7.6,2.2,9.0 };
 	box = "zhang3";
 
-	CBox cb;
-
 	return 0;
 }
 
