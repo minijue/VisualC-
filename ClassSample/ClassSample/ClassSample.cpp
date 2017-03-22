@@ -12,10 +12,12 @@ int main()
 	ps->display();
 	delete ps;
 
-
 	Class c1(3);
 	c1.addStudents();
 	c1.displayAll();
+
+	Class c2 = c1;
+	c2.displayAll();
 
 	system("pause");
     return 0;

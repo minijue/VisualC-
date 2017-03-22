@@ -4,7 +4,7 @@ class Class
 {
 public:
 	Class();
-	Class(unsigned int n);
+	explicit Class(unsigned int n);
 	Class(const Class &c);
 
 	void addStudents();
