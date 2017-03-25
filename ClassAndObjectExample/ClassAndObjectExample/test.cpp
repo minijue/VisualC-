@@ -16,6 +16,12 @@ int main() {
 	p->displayAll();
 	delete p;
 
+	string ss[] = { "zhao","qian","sun","li" };
+	for each (string s in ss)
+	{
+		cout << s << ' ';
+	}
+
 	system("pause");
 	return 0;
 }
