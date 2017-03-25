@@ -21,6 +21,10 @@ int main() {
 	{
 		cout << s << ' ';
 	}
+	cout << endl;
+	for (string s : ss) {
+		cout << s << ' ';
+	}
 
 	system("pause");
 	return 0;
