@@ -6,7 +6,7 @@ public:
 	SpecStudent();
 	~SpecStudent();
 
-	void display() const;
+	void display() const; 
 	void modifyAdditionalScore(double as);
 
 protected:
