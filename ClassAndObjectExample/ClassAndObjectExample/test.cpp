@@ -8,6 +8,10 @@ int main() {
 	SchoolClass sc1(3);
 	sc1.inputStudents();
 	sc1.displayAll();
+
+	SchoolClass sc2(5);
+	sc2 = sc1;
+	Student sk = sc2[3];
  
 // 	SchoolClass sc2(sc1);
 // 	sc2.displayAll();

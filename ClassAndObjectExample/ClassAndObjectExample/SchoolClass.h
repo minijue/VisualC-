@@ -12,6 +12,9 @@ public:
 	void inputStudents();
 	void displayAll() const;
 
+	SchoolClass& operator=(const SchoolClass& b);
+	Student& operator[](int index);
+
 private:
 	unsigned int nCount{ 0 };
 	Student *ps{ nullptr };

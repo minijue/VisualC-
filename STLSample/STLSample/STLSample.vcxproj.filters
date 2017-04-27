@@ -24,18 +24,12 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Account.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="OperatorSample.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Account.cpp">
+    <ClCompile Include="STLSample.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

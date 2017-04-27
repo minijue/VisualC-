@@ -47,3 +47,26 @@ void SchoolClass::displayAll() const
 		}
 	}
 }
+
+SchoolClass & SchoolClass::operator=(const SchoolClass & b) {
+	if (this != &b) {
+		if (ps != nullptr) {
+			delete[] ps;
+			ps = nullptr;
+		}
+
+		nCount = b.nCount;
+		ps = new Student[nCount];
+		for (unsigned int i = 0; i < nCount; ++i) {
+			ps[i] = b.ps[i];
+		}
+	}
+	return *this;
+}
+
+Student & SchoolClass::operator[](int index) {
+	if (ps != nullptr && index < nCount) {
+		return ps[index];
+	}
+}
+

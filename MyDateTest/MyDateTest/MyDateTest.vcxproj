@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{022267F8-BED8-4D46-B8BE-AB33287FA172}</ProjectGuid>
+    <ProjectGuid>{4A60670E-1BAF-4CC9-9E6D-6E4EDE5AC0B3}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>OperatorSample</RootNamespace>
+    <RootNamespace>MyDateTest</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -138,13 +138,13 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Account.h" />
+    <ClInclude Include="MyDate.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Account.cpp" />
-    <ClCompile Include="OperatorSample.cpp" />
+    <ClCompile Include="MyDate.cpp" />
+    <ClCompile Include="MyDateTest.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
