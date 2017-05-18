@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{CAB23C3E-7FB9-48CD-BFC8-562411451F8F}</ProjectGuid>
+    <ProjectGuid>{2F3ADFC6-C7DB-40E2-8D37-32AEC6A7576C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>STLSample</RootNamespace>
+    <RootNamespace>StreamSample</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -148,7 +148,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="STLSample.cpp" />
+    <ClCompile Include="StreamSample.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
