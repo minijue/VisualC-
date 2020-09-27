@@ -27,13 +27,13 @@ END_MESSAGE_MAP()
 
 class HelloApp : public CWinApp {
 public:
-	HelloApp() : CWinApp("Hello world!") {
+	HelloApp() : CWinApp(_T("Hello world!")) {
 	}
 
 	BOOL InitInstance() {
 		CFrameWnd* MyFrame = new MyFrameWindow;
 		m_pMainWnd = MyFrame;
-		MyFrame->Create(NULL, (LPCTSTR)"Hello");
+		MyFrame->Create(NULL, (LPCTSTR)_T("Hello"));
 		MyFrame->SetIcon(LoadIcon(IDI_MAINICON), TRUE);
 		MyFrame->ShowWindow(SW_SHOW);
 		return TRUE;
